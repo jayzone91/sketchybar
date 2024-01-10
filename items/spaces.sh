@@ -1,17 +1,17 @@
 #!/bin/bash
 
-SPACE_SIDS=(1 2 3 4 5 6 7 8 9 10)
+SPACE_SIDS=(0)
 
-for sid in "${SPACE_SIDS[@]}"
-do
-  sketchybar --add space space.$sid left                                 \
-             --set space.$sid space=$sid                                 \
-                              icon=$sid                                  \
+# for sid in "${SPACE_SIDS[@]}"
+# do
+  sketchybar --add space space.1 left                                 \
+             --set space.1 space=1                                 \
                               label.font="sketchybar-app-font:Regular:16.0" \
-                              label.padding_right=20                     \
-                              label.y_offset=-1                          \
+                              label.padding_left=-15 \
+                              label.padding_right=15                     \
                               script="$PLUGIN_DIR/space.sh"
-done
+                              # label.y_offset=0                          \
+# done
 
 sketchybar --add item space_separator left                             \
            --set space_separator icon="􀆊"                                \
